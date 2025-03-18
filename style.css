@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'VT323', monospace;
+    position: relative;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Mantém o vídeo atrás do conteúdo */
+    opacity: 1;
+}
+
+
+/* Janela estilo Windows XP/7 */
+.pre-window {
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    background: #011041;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-top: 3px solid rgb(255, 255, 255);
+    border-left: 3px solid white;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.window {
+    height: 100%;
+    border: 8px solid #a8a8a8;
+    border-radius: 2px;
+}
+
+/* Barra de título */
+.window-header {
+    background: linear-gradient(to bottom, #001aff, #0004ff);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 0px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+}
+
+.icon95 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* Botões de controle */
+.window-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.window-buttons div {
+    width: 20px;
+    height: 20px;
+    background: #a8a8a8;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.window-buttons div:hover {
+    background: #ffffff00;
+}
+
+/* Conteúdo dentro da janela */
+.window-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #011041;
+    padding: 10px;
+    overflow-y: auto;  /* Ativa a rolagem vertical */
+    max-height: calc(97% - 40px);  /* Define a altura máxima, ajustando para a barra de título */
+    border-top: 8px solid #a8a8a8;
+    z-index: 1000;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #ffffff00;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #4396f5;
+    text-shadow: 0 0 5px rgba(0, 153, 255, 0.562);
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 20px;
+
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #0295f72f;
+    color: rgb(255, 255, 255);
+  }
+  h1::after {
+    content: "|"; /* Cursor piscando */
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.crt {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+    width: 1000px;
+    max-width: 600px;
+    height: 400px;
+    color: #4396f5;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    text-shadow: 0 0 5px rgba(0, 153, 255, 0.562);
+}
+.crt a {
+    z-index: 10; /* Garante que o link fique acima de outros elementos */
+    position: relative;
+    text-decoration: none;
+    color: #439ff5;
+    font-size: 22px;
+    text-shadow: 0 0 5px rgba(0, 153, 255, 0.562);
+}
+.crt a:hover {
+    color: white;
+}
+.crt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        rgba(0, 153, 255, 0.562) 0px,
+        rgba(0, 153, 255, 0.562) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    opacity: 0.2;
+    pointer-events: none;
+}
+.crt::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 153, 255, 0.562) 10%, transparent 80%);
+    mix-blend-mode: lighten;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:10px;
+}
+.linkedin,.htb,.thm,.gth {
+    padding: 10px;
+    width: 30%;
+    border: 2px solid #4396f5;
+    background-color: rgba(102, 51, 153, 0);
+    border-radius: 3px;
+}
+.linkedin:hover {
+    background-color: rgba(43, 170, 255, 0.438);
+}
+.htb:hover {
+    background-color: rgba(43, 170, 255, 0.438);
+}
+.thm:hover {
+    background-color: rgba(43, 170, 255, 0.438);
+}
+.gth:hover {
+    background-color: rgba(43, 170, 255, 0.438);
+}
