@@ -1,4 +1,4 @@
-const text = "Hello, Wired!, My name is Lain!";
+const text = "Hello, Wired!, My name is Filipe!";
         const speed = 150; // Velocidade da digitação
         let index = 0;
         let isDeleting = false;
